@@ -20,6 +20,7 @@ router.get('/journal-entries/:id', (req, res, next) => {
 });
 
 router.post('/journal-entries', (req, res, next) => {
+  console.log(req.body)
   const newEntry = new Entry({
     title: req.body.title,
     content: req.body.content
